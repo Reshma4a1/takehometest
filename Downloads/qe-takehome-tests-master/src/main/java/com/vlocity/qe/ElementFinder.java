@@ -28,7 +28,8 @@ public class ElementFinder
         try {
             value = driver.findElement(by);
         } catch (NoSuchElementException e) {
-            // the element can not be found
+        	
+        	System.out.println("Uanble to locate the elemnt " + e);
         }
 
         return value;

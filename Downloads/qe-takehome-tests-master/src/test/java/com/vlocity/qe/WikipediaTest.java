@@ -36,15 +36,15 @@ public class WikipediaTest {
 	private WebDriver driver;
 	private ElementFinder finder;
 
+
+	/*
+	 * If the following driver version doesn't work with your Chrome version
+	 * see https://sites.google.com/a/chromium.org/chromedriver/downloads
+	 * and update it as needed.
+	 */
 	@BeforeClass
 	public void setup() {
-
-		/*
-		 * If the following driver version doesn't work with your Chrome version
-		 * see https://sites.google.com/a/chromium.org/chromedriver/downloads
-		 * and update it as needed.
-		 */
-
+		
 		WebDriverManager.chromedriver().version("74.0.3729.6").setup();
 		driver = new ChromeDriver();
 		finder = new ElementFinder(driver);
@@ -110,25 +110,14 @@ public class WikipediaTest {
 	@Test(dataProvider = "languages")
 	public void validate_languages_statuscode(String languagesdata) {
 		String languages = "//strong[text()='" + languagesdata + "']";
-		finder.findElement(By.xpath(languages)).click(); 
-		log.info("Clicked on " +languagesdata +" successfully" );
+		finder.findElement(By.xpath(languages)).click();
+		log.info("Clicked on " + languagesdata + " successfully");
 		String url = driver.getCurrentUrl();
-		
-		/*ChromeOptions options = new ChromeOptions();
-		DesiredCapabilities cap = DesiredCapabilities.chrome();
-        cap.setCapability(ChromeOptions.CAPABILITY, options);
-		LoggingPreferences logPrefs = new LoggingPreferences();
-        logPrefs.enable(LogType.PERFORMANCE, Level.ALL);
-        cap.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
-		LogEntries logs = driver.manage().logs().get("PERFORMANCE");
-		System.out.println(logs);*/
-		
 		Response resp = RestAssured.get(url);
 		int code = resp.getStatusCode();
 		Assert.assertEquals(code, 200);
-		System.out.println("Verified status code for : " +languagesdata );
+		System.out.println("Verified status code for : " + languagesdata);
 		driver.navigate().back();
-		
 
 	}
 	

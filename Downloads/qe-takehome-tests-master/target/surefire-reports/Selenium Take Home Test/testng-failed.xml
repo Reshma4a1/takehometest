@@ -8,11 +8,9 @@
     <classes>
       <class name="com.vlocity.qe.WikipediaTest">
         <methods>
-          <include name="validate_languages"/>
           <include name="closeBrowser"/>
           <include name="setup"/>
-          <include name="sloganPresent"/>
-          <include name="validate_languages_statuscode"/>
+          <include name="validate_languages_statuscode" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.vlocity.qe.WikipediaTest -->
     </classes>

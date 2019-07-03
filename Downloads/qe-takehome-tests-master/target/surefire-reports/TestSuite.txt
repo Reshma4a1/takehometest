@@ -1,17 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 39.613 s <<< FAILURE! - in TestSuite
-setup(com.vlocity.qe.WikipediaTest)  Time elapsed: 38.76 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-unknown error: failed to change window state to maximized, current state is minimized
-  (Session info: chrome=75.0.3770.100)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'JCPSIJGEC', ip: '192.168.1.15', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\rs2\AppData\Local\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51936}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
-Session ID: 61b2f29c1d6036fb4cf839f03366a54c
-	at com.vlocity.qe.WikipediaTest.setup(WikipediaTest.java:52)
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 53.193 s <<< FAILURE! - in TestSuite
+validate_languages_statuscode(com.vlocity.qe.WikipediaTest)  Time elapsed: 17.875 s  <<< FAILURE!
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at com.vlocity.qe.WikipediaTest.validate_languages_statuscode(WikipediaTest.java:116)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at com.vlocity.qe.WikipediaTest.validate_languages_statuscode(WikipediaTest.java:116)
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at com.vlocity.qe.WikipediaTest.validate_languages_statuscode(WikipediaTest.java:116)
+
+validate_languages_statuscode(com.vlocity.qe.WikipediaTest)  Time elapsed: 0.109 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.vlocity.qe.WikipediaTest.validate_languages_statuscode(WikipediaTest.java:113)
 
