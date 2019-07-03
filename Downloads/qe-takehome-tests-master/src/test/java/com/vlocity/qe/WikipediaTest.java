@@ -109,6 +109,7 @@ public class WikipediaTest {
 
 	@Test(dataProvider = "languages")
 	public void validate_languages_statuscode(String languagesdata) {
+		//validate_languages_statuscode
 		String languages = "//strong[text()='" + languagesdata + "']";
 		finder.findElement(By.xpath(languages)).click();
 		log.info("Clicked on " + languagesdata + " successfully");
