@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Selenium Take Home Test]">
+  <listeners>
+    <listener class-name="com.vlocity.PostExecution.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Selenium Take Home Test(failed)">
+    <classes>
+      <class name="com.vlocity.qe.WikipediaTest">
+        <methods>
+          <include name="validate_languages"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="sloganPresent"/>
+          <include name="validate_languages_statuscode"/>
+        </methods>
+      </class> <!-- com.vlocity.qe.WikipediaTest -->
+    </classes>
+  </test> <!-- Selenium Take Home Test(failed) -->
+</suite> <!-- Failed suite [Selenium Take Home Test] -->

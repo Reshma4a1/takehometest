@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Selenium Take Home Test" verbose="1">
+<listeners>
+		<listener class-name="com.vlocity.PostExecution.ExtentReporterNG" />
+	</listeners>
+
+    <test name="Selenium Take Home Test">
+        <classes>
+            <class name="com.vlocity.qe.WikipediaTest"/>
+        </classes>
+    </test>
+
+</suite>
+ 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Selenium Take Home Test]">
+  <test thread-count="5" name="Selenium Take Home Test(failed)">
+    <classes>
+      <class name="com.vlocity.qe.WikipediaTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="sloganPresent"/>
+        </methods>
+      </class> <!-- com.vlocity.qe.WikipediaTest -->
+    </classes>
+  </test> <!-- Selenium Take Home Test(failed) -->
+</suite> <!-- Failed suite [Selenium Take Home Test] -->
